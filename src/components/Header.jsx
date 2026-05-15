@@ -4,6 +4,7 @@ import "./Header.css";
 
 const Header = ({ onEnquireClick }) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,9 +31,24 @@ const Header = ({ onEnquireClick }) => {
           </div>
         </div>
 
+        {/* Hamburger Icon for Mobile */}
+        <button 
+          className={`hamburger-btn ${isMobileMenuOpen ? "open" : ""}`}
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
         {/* Buttons */}
-        <div className="header-buttons">
-          <button className="white-btn" onClick={onEnquireClick}>Enquire Now</button>
+        <div className={`header-buttons ${isMobileMenuOpen ? "mobile-open" : ""}`}>
+          <button className="white-btn" onClick={() => {
+            onEnquireClick();
+            setIsMobileMenuOpen(false);
+          }}>
+            Enquire Now
+          </button>
 
           <button className="white-btn">
             Call: 800 PEARLDXB
