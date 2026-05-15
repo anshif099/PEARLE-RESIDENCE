@@ -108,6 +108,15 @@
   }
 }
 
+@media (max-width: 768px) {
+  .resort-living-section {
+    padding: 100px 0 60px 0; /* Accommodate hero cards overlap */
+  }
+  .resort-living-container {
+    padding: 0 20px;
+  }
+}
+
 /* Animations */
 .resort-content > h2,
 .resort-content > p,

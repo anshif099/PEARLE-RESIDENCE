@@ -110,12 +110,34 @@
 
 @media (max-width: 768px) {
   .hero-content-wrapper {
-    padding: 20px;
+    padding: 0 20px;
   }
   .info-cards {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
   }
   .info-card {
-    min-width: 100%;
+    min-width: 0; /* Override flex min-width if any */
+    padding: 20px 15px;
+  }
+  .info-card h3 {
+    font-size: 18px;
+  }
+  .info-card p {
+    font-size: 12px;
+  }
+  .sound-toggle-btn {
+    bottom: 150px;
+    left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-cards {
+    grid-template-columns: 1fr;
+  }
+  .hero-content-wrapper {
+    transform: translateY(20%); /* Less overlap on very small screens to avoid excessive height */
   }
 }

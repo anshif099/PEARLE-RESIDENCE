@@ -241,3 +241,15 @@
     right: 0;
   }
 }
+
+@media (max-width: 768px) {
+  .strategic-section {
+    padding: 60px 20px;
+  }
+  .strategic-box {
+    padding: 20px;
+  }
+  .strategic-title {
+    font-size: 32px;
+  }
+}

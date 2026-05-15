@@ -151,11 +151,18 @@
 }
 
 @media (max-width: 768px) {
+  .enquire-section {
+    padding: 60px 20px;
+  }
   .form-grid {
     grid-template-columns: 1fr;
   }
   
   .enquire-form-container {
     padding: 30px 20px;
+  }
+
+  .enquire-header h2 {
+    font-size: 32px;
   }
 }

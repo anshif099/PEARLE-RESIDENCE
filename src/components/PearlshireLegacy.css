@@ -98,3 +98,12 @@
     font-size: 32px;
   }
 }
+
+@media (max-width: 768px) {
+  .legacy-section {
+    padding: 60px 0;
+  }
+  .legacy-container {
+    padding: 0 20px;
+  }
+}
