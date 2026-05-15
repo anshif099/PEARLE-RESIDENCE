@@ -1,0 +1,148 @@
+.resort-living-section {
+  background-color: #e3dcd3; /* Matches the beige background */
+  width: 100%;
+  padding: 140px 0 80px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.resort-living-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.resort-content {
+  flex: 1;
+  text-align: left;
+}
+
+.resort-content h2 {
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.resort-subtitle {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 90%;
+}
+
+.resort-features {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.feature-icon {
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  background-color: #f2efe9;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+.feature-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.feature-item p {
+  margin: 0;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.feature-item strong {
+  font-weight: 700;
+  color: #111;
+}
+
+.resort-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.resort-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 992px) {
+  .resort-living-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .resort-image-container {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .resort-content h2 {
+    font-size: 32px;
+  }
+}
+
+/* Animations */
+.resort-content > h2,
+.resort-content > p,
+.resort-content .feature-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.resort-living-section.visible .resort-content > h2 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.resort-living-section.visible .resort-content > p {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.resort-living-section.visible .resort-content .feature-item:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
+.resort-living-section.visible .resort-content .feature-item:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.7s;
+}
+
+.resort-living-section.visible .resort-content .feature-item:nth-child(3) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.9s;
+}

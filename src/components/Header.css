@@ -1,0 +1,126 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  transition: background 0.3s ease, padding 0.3s ease;
+}
+
+.header.scrolled {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.overlay {
+  display: none;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100%;
+  padding: 0 80px;
+}
+
+.text-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-main {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 26px;
+  letter-spacing: 12px;
+  font-weight: 400;
+  color: white;
+  margin-left: 12px; /* compensate for tracking on last char */
+  white-space: nowrap;
+}
+
+.logo-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 8px 0;
+}
+
+.logo-sub {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 8px;
+  letter-spacing: 8px;
+  font-weight: 300;
+  color: #999;
+  text-transform: uppercase;
+  margin-left: 8px;
+  white-space: nowrap;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.white-btn {
+  background: white;
+  border: none;
+  padding: 22px 36px;
+  border-radius: 10px;
+  color: #000;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.white-btn:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: auto;
+    padding: 30px 0;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .logo-main {
+    font-size: 18px;
+    letter-spacing: 6px;
+    margin-left: 6px;
+  }
+  
+  .logo-sub {
+    font-size: 7px;
+    letter-spacing: 4px;
+    margin-left: 4px;
+  }
+
+  .header-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .white-btn {
+    width: 100%;
+  }
+}

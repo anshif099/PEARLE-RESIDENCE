@@ -1,0 +1,100 @@
+.legacy-section {
+  background-color: #000000;
+  width: 100%;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.legacy-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.legacy-content {
+  flex: 1;
+  text-align: left;
+}
+
+.legacy-content h2 {
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+.legacy-content p {
+  font-size: 15px;
+  color: #dddddd;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.legacy-image-container {
+  flex: 1.2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.legacy-image {
+  width: 100%;
+  max-width: 650px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Animations */
+.legacy-content > h2,
+.legacy-content > p,
+.legacy-image-container {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.legacy-section.visible .legacy-content > h2 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.legacy-section.visible .legacy-content > p:nth-of-type(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.legacy-section.visible .legacy-content > p:nth-of-type(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
+.legacy-section.visible .legacy-image-container {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+@media (max-width: 992px) {
+  .legacy-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .legacy-image-container {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .legacy-content h2 {
+    font-size: 32px;
+  }
+}

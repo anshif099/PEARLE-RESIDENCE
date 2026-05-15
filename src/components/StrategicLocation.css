@@ -1,0 +1,243 @@
+.strategic-section {
+  background-color: #e3dcd3;
+  padding: 80px 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.strategic-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.strategic-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 30px 0;
+  text-align: left;
+}
+
+.strategic-box {
+  background-color: transparent;
+  border: 8px solid white;
+  border-radius: 12px;
+  display: flex;
+  padding: 30px;
+  gap: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.3); /* Subtle semi-transparent background if needed */
+}
+
+.strategic-map {
+  flex: 1.2;
+  position: relative;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.strategic-map img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.strategic-map:hover img {
+  transform: scale(1.02);
+}
+
+.map-overlay-hint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.strategic-map:hover .map-overlay-hint {
+  opacity: 1;
+}
+
+.map-overlay-hint span {
+  background: white;
+  color: #111;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.strategic-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.strategic-desc {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 30px 0;
+}
+
+.strategic-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.strategic-list li {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 15px;
+}
+
+.strategic-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #111;
+  font-weight: bold;
+}
+
+.strategic-list strong {
+  color: #111;
+  font-weight: 700;
+}
+
+/* Animations */
+.strategic-title,
+.strategic-map,
+.strategic-desc,
+.strategic-list li {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.strategic-section.visible .strategic-title {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.strategic-section.visible .strategic-map {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.strategic-section.visible .strategic-desc {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
+.strategic-section.visible .strategic-list li:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+
+.strategic-section.visible .strategic-list li:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.7s;
+}
+
+.strategic-section.visible .strategic-list li:nth-child(3) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.8s;
+}
+
+.strategic-section.visible .strategic-list li:nth-child(4) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.9s;
+}
+
+/* Modal */
+.map-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.map-modal-content {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-modal-image {
+  max-width: 100%;
+  max-height: calc(90vh - 20px);
+  object-fit: contain;
+}
+
+.map-modal-close {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-modal-close svg {
+  width: 30px;
+  height: 30px;
+}
+
+.map-modal-close:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 992px) {
+  .strategic-box {
+    flex-direction: column;
+  }
+  
+  .strategic-map {
+    height: 300px;
+  }
+  
+  .map-modal-close {
+    top: -40px;
+    right: 0;
+  }
+}

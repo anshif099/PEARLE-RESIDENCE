@@ -1,0 +1,115 @@
+.amenities-section {
+  background-color: #e3dcd3;
+  padding: 80px 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.amenities-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+}
+
+.amenities-header h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+}
+
+.amenities-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-arrow {
+  background-color: transparent;
+  border: 1.5px solid #111;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #111;
+  transition: all 0.3s ease;
+}
+
+.nav-arrow:hover {
+  background-color: #111;
+  color: #e3dcd3;
+}
+
+.nav-arrow svg {
+  width: 24px;
+  height: 24px;
+}
+
+.amenities-carousel {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.amenities-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: auto; /* Handle smooth scrolling in JS when needed */
+  padding-bottom: 20px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.amenities-track::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.amenity-item {
+  flex: 0 0 250px; /* Fixed width for each item */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.amenity-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.amenity-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.amenity-item h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .amenities-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  
+  .amenities-header h2 {
+    font-size: 32px;
+  }
+  
+  .amenity-item {
+    flex: 0 0 200px;
+  }
+}

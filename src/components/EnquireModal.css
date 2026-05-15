@@ -1,0 +1,84 @@
+.enquire-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: 3000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.enquire-modal-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3001;
+  transition: all 0.2s ease;
+}
+
+.enquire-modal-close:hover {
+  background: white;
+  color: black;
+}
+
+.enquire-modal-close svg {
+  width: 20px;
+  height: 20px;
+}
+
+.enquire-modal-wrapper {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.enquire-modal-title {
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+
+.enquire-modal-content {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 40px 50px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .enquire-modal-content {
+    padding: 30px 20px;
+  }
+  
+  .enquire-modal-title {
+    font-size: 36px;
+  }
+  
+  .enquire-modal-close {
+    top: 15px;
+    right: 15px;
+  }
+}

@@ -1,0 +1,161 @@
+.enquire-section {
+  background-color: #e3dcd3;
+  padding: 80px 40px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.enquire-container {
+  max-width: 900px;
+  width: 100%;
+}
+
+.enquire-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.enquire-header h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 15px 0;
+}
+
+.enquire-header p {
+  font-size: 16px;
+  color: #777;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.enquire-form-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 40px 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.radio-label {
+  font-size: 15px;
+  color: #555;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  color: #111;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+  accent-color: #007bff; /* Basic blue like screenshot */
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #dbd3c9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 16px 45px 16px 20px;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  color: #333;
+  outline: none;
+}
+
+.form-group input::placeholder {
+  color: #888;
+}
+
+.input-icon {
+  position: absolute;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  color: #111;
+  pointer-events: none;
+}
+
+.phone-group {
+  display: flex;
+}
+
+.phone-prefix {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  background-color: #d1c7bc;
+  color: #111;
+  font-size: 14px;
+  font-weight: 500;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  height: 100%;
+  white-space: nowrap;
+}
+
+.phone-group input {
+  padding-left: 15px;
+}
+
+.form-submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.submit-btn {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 40px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  background-color: #222;
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .enquire-form-container {
+    padding: 30px 20px;
+  }
+}
