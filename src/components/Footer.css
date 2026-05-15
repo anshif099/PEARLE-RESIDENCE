@@ -80,5 +80,27 @@
   font-size: 11px;
   letter-spacing: 0.5px;
   margin: 5px 0;
-  font-family: monospace, sans-serif; /* For technical/clean look */
+  font-family: monospace, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .footer-section {
+    padding: 60px 20px 30px 20px;
+  }
+  
+  .footer-logo-container .logo-main {
+    font-size: 16px;
+    letter-spacing: 6px;
+    margin-left: 0;
+  }
+  
+  .footer-logo-container .logo-sub {
+    font-size: 8px;
+    letter-spacing: 4px;
+    margin-left: 0;
+  }
+  
+  .footer-copyright p {
+    font-size: 9px;
+  }
 }
