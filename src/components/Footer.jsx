@@ -17,7 +17,7 @@ const Footer = () => {
         {/* QR Code Placeholder */}
         <div className="footer-qr">
           <img
-            src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=BondLiving"
+            src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://pearle-residence.vercel.app/"
             alt="Bond Living QR Code"
           />
         </div>
